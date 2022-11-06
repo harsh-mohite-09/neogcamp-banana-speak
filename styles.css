@@ -2,6 +2,13 @@ body {
   margin: 0;
   font-family: "Edu VIC WA NT Beginner", cursive;
   font-size: 1.2em;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 section {
@@ -9,8 +16,8 @@ section {
 }
 
 textarea {
-  display: inline-block;
   width: 30%;
+  min-width: 300px;
   margin: 30px auto;
   height: 20vh;
   margin: 1rem;
@@ -20,7 +27,6 @@ textarea {
 }
 
 button {
-  display: inline-block;
   margin: 20px auto;
   background-color: #f5e050;
   border: none;
@@ -40,6 +46,7 @@ h1 {
 #output {
   display: inline-block;
   width: 30%;
+  min-width: 300px;
   height: 20vh;
   border: 1px solid black;
   margin: 1rem;
@@ -52,13 +59,14 @@ footer {
   background-color: #f5e050;
   text-align: center;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
 #footer-div {
-  display: inline-block;
   text-align: center;
   box-sizing: border-box;
-  width: 30%;
+  width: 400px;
 }
 
 .footer-heading {
@@ -68,4 +76,27 @@ footer {
 .output-font {
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+@media (max-width: 400px) {
+  textarea,
+  #output {
+    height: 80px;
+  }
+
+  .output-font {
+    margin: 0;
+  }
+
+  button {
+    margin-top: 0;
+  }
+
+  .about-text {
+    margin: 5px;
+  }
+
+  .footer-heading {
+    padding: 0;
+  }
 }
